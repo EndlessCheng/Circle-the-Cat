@@ -25,7 +25,7 @@ function getMoveDir(cat)
 			break;
 		}
 	}
-	if (can)return MOVE_LEFT;
+	if (can) return MOVE_LEFT;
 	//left up
 	can = true;
 	var x = cat.indexX, y = cat.indexY;
@@ -39,7 +39,7 @@ function getMoveDir(cat)
 		}
 		if (y % 2 == 0)x--;
 		y--;
-		if (y < 0 || x < 0)break;
+		if (y < 0 || x < 0) break;
 	}
 	if (can)return MOVE_UPLEFT;
 	//rightup
@@ -53,11 +53,11 @@ function getMoveDir(cat)
 			distanceMap[MOVE_UPRIGHT] = cat.indexY - y;
 			break;
 		}
-		if (y % 2 == 1)x++;
+		if (y % 2 == 1) x++;
 		y--;
-		if (y < 0 || x > 8)break;
+		if (y < 0 || x > 8) break;
 	}
-	if (can)return MOVE_UPRIGHT;
+	if (can) return MOVE_UPRIGHT;
 	//right
 	can = true;
 	for (var x = cat.indexX; x < 9; x++)
@@ -69,7 +69,7 @@ function getMoveDir(cat)
 			break;
 		}
 	}
-	if (can)return MOVE_RIGHT;
+	if (can) return MOVE_RIGHT;
 	//right down
 	can = true;
 	x = cat.indexX;
@@ -84,9 +84,9 @@ function getMoveDir(cat)
 		}
 		if (y % 2 == 1)x++;
 		y++;
-		if (y > 8 || x > 8)break;
+		if (y > 8 || x > 8) break;
 	}
-	if (can)return MOVE_DOWNRIGHT;
+	if (can) return MOVE_DOWNRIGHT;
 	//left down
 	can = true;
 	x = cat.indexX;
@@ -99,11 +99,11 @@ function getMoveDir(cat)
 			distanceMap[MOVE_DOWNLEFT] = y - cat.indexY;
 			break;
 		}
-		if (y % 2 == 0)x--;
+		if (y % 2 == 0) x--;
 		y++;
-		if (y > 8 || x < 0)break;
+		if (y > 8 || x < 0) break;
 	}
-	if (can)return MOVE_DOWNLEFT;
+	if (can) return MOVE_DOWNLEFT;
 	var maxDir = -1, maxValue = -1;
 	for (var dir = 0; dir < distanceMap.length; dir++)
 	{
