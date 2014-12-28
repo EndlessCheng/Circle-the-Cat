@@ -69,6 +69,7 @@ function getMoveDir(cat)
 			break;
 		}
 	}
+	
 	if (can) return MOVE_RIGHT;
 	//right down
 	can = true;
